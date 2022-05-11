@@ -12,12 +12,12 @@ Hypergraph Contrastive Collaborative Filtering (HCCF) devises parameterized hype
 If you want to use our codes and datasets in your research, please cite:
 ```
 @inproceedings{hccf2022,
-  author    = {Xia, Lianghao and 
-			   Huang, Chao and 
-			   Xu, Yong and 
-			   Zhao, Jiashu and 
-			   Yin, Dawei and 
-			   Huang, Jimmy Xiangji},
+  author    = {Xia, Lianghao and
+               Huang, Chao and
+	       Xu, Yong and
+	       Zhao, Jiashu and
+	       Yin, Dawei and
+	       Huang, Jimmy Xiangji},
   title     = {Hypergraph Contrastive Collaborative Filtering},
   booktitle = {Proceedings of the 45th International {ACM} {SIGIR} Conference on
                Research and Development in Information Retrieval, {SIGIR} 2022, Madrid,
