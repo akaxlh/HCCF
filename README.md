@@ -1,5 +1,5 @@
 
-# HCCF
+# Hypergraph Contrastive Collaborative Filtering
 
 This repository contains TensorFlow codes and datasets for the paper:
 
