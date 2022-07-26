@@ -3,7 +3,7 @@
 
 This repository contains TensorFlow codes and datasets for the paper:
 
->Lianghao Xia, Chao Huang, Yong Xu, Jiashu Zhao, Dawei Yin, Jimmy Xiangji Huang (2022). Hypergraph Contrastive Collaborative Filtering, <a href='https://arxiv.org/abs/2204.12200'>Paper in arXiv</a>. In SIGIR'22, Madrid, Spain, July 11-15, 2022.
+>Lianghao Xia, Chao Huang, Yong Xu, Jiashu Zhao, Dawei Yin, Jimmy Xiangji Huang (2022). Hypergraph Contrastive Collaborative Filtering, <a href='https://arxiv.org/abs/2204.12200'>Paper in arXiv</a>, <a href='https://dl.acm.org/doi/abs/10.1145/3477495.3532058'>Paper in ACM</a>. In SIGIR'22, Madrid, Spain, July 11-15, 2022.
 
 ## Introduction
 Hypergraph Contrastive Collaborative Filtering (HCCF) devises parameterized hypergraph neural network and hypergraph-graph contrastive learning, to relieve the over-smoothing issue for conventional graph neural networks, and address the sparse and skewed data distribution problem in collaborative filtering.
