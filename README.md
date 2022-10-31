@@ -30,10 +30,18 @@ If you want to use our codes and datasets in your research, please cite:
 
 ## Environment
 The codes of HCCF are implemented and tested under the following development environment:
+
+TensorFlow:
 * python=3.6.12
 * tensorflow=1.14.0
 * numpy=1.16.0
 * scipy=1.5.2
+
+pyTorch:
+* python=3.10.4
+* torch=1.11.0
+* numpy=1.22.3
+* scipy=1.7.3
 
 ## Datasets
 We utilized three datasets to evaluate HCCF: <i>Yelp, MovieLens, </i>and <i>Amazon</i>. Following the common settings of implicit feedback, if user $u_i$ has rated item $v_j$, then the element $(u_i, v_j)$ is set as 1, otherwise 0. We filtered out users and items with too few interactions. The datasets are divided into training set, validation set and testing set by 7:1:2.
