@@ -1,7 +1,7 @@
 
 # Hypergraph Contrastive Collaborative Filtering
 
-### <div style='color:#C00000'>Torch version is available now!</div>
+### Torch version is available now!
 
 This repository contains TensorFlow and pyTorch code and datasets for the paper:
 
@@ -51,19 +51,19 @@ Please unzip the datasets first. Also you need to create the `History/` and the 
 
 * Yelp
 ```
-python .\labcode_efficient.py --data yelp --temp 1 --ssl_reg 1e-4
+python labcode_efficient.py --data yelp --temp 1 --ssl_reg 1e-4
 ```
 * MovieLens
 ```
-python .\labcode_efficient.py --data ml10m --temp 0.1 --ssl_reg 1e-6 --keepRate 1.0 --reg 1e-3
+python labcode_efficient.py --data ml10m --temp 0.1 --ssl_reg 1e-6 --keepRate 1.0 --reg 1e-3
 ```
 * Amazon
 ```
-python .\labcode_efficient.py --data amazon --temp 0.1 --ssl_reg 1e-7 --reg 1e-2
+python labcode_efficient.py --data amazon --temp 0.1 --ssl_reg 1e-7 --reg 1e-2
 ```
 
 ### For pyTorch
-Switch your working directory to ```torchVersion/```, run ```python .\Main.py```. The implementation has been improved in the torch code. You may need to adjust the hyperparameter settings.
+Switch your working directory to ```torchVersion/```, run ```python Main.py```. The implementation has been improved in the torch code. You may need to adjust the hyperparameter settings. If you want to run HCCF on other datasets, we suggest you consider using a simplified version `torchVersion/Model_sparse.py` if your dataset is sparse. To do so, you should change the imported module in `torchVersion/Main.py` from `Model` to `Model_sparse`.
 
 Important arguments:
 * `reg`: It is the weight for weight-decay regularization. We tune this hyperparameter from the set `{1e-2, 1e-3, 1e-4, 1e-5}`.
@@ -71,6 +71,7 @@ Important arguments:
 * `temp`: This is the temperature factor in the InfoNCE loss in our contrastive learning. The value is selected from `{10, 3, 1, 0.3, 0.1}`.
 * `keepRate`: It denotes the rate to keep edges in the graph dropout, which is tuned from `{0.25, 0.5, 0.75, 1.0}`.
 * `leaky`: The slope of the leakyReLU activation function. This parameter is recommended to tune from `{1.0, 0.5, 0.1}`.
+* `mult`: A hyperparameter to manually tune the embedding magnitude of hypergraph NN in `Model_sparse.py`. Empirically, you can tune this parameter for the simplified version of HCCF from `{1e-2, 1e-1, 1}`.
 
 ## Acknowledgements
 This research is supported by the research grants from the Department of Computer Science & Musketeers Foundation Institute of Data Science at the University of Hong Kong, the Natural Sciences & Engineering Research Council (NSERC) of Canada.
