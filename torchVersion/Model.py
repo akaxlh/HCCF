@@ -67,7 +67,7 @@ class GCNLayer(nn.Module):
 		self.act = nn.LeakyReLU(negative_slope=args.leaky)
 
 	def forward(self, adj, embeds):
-		return self.act(t.spmm(adj, embeds))
+		return (t.spmm(adj, embeds))
 
 class HGNNLayer(nn.Module):
 	def __init__(self):
@@ -75,8 +75,10 @@ class HGNNLayer(nn.Module):
 		self.act = nn.LeakyReLU(negative_slope=args.leaky)
 	
 	def forward(self, adj, embeds):
-		lat = self.act(adj.T @ embeds)
-		ret = self.act(adj @ lat)
+		# lat = self.act(adj.T @ embeds)
+		# ret = self.act(adj @ lat)
+		lat = (adj.T @ embeds)
+		ret = (adj @ lat)
 		return ret
 
 class SpAdjDropEdge(nn.Module):
