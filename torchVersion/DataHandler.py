@@ -40,7 +40,7 @@ class DataHandler:
 		b = sp.csr_matrix((args.item, args.item))
 		mat = sp.vstack([sp.hstack([a, mat]), sp.hstack([mat.transpose(), b])])
 		mat = (mat != 0) * 1.0
-		mat = (mat + sp.eye(mat.shape[0])) * 1.0
+		# mat = (mat + sp.eye(mat.shape[0])) * 1.0
 		mat = self.normalizeAdj(mat)
 
 		# make cuda tensor
