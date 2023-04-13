@@ -63,7 +63,22 @@ python labcode_efficient.py --data amazon --temp 0.1 --ssl_reg 1e-7 --reg 1e-2
 ```
 
 ### For pyTorch
-Switch your working directory to ```torchVersion/```, run ```python Main.py```. The implementation has been improved in the torch code. You may need to adjust the hyperparameter settings. If you want to run HCCF on other datasets, we suggest you consider using a simplified version `torchVersion/Model_sparse.py` if your dataset is sparse. To do so, you should change the imported module in `torchVersion/Main.py` from `Model` to `Model_sparse`.
+Switch your working directory to ```torchVersion/```, run ```python Main.py```. The implementation has been improved in the torch code. You may need to adjust the hyperparameter settings. If you want to run HCCF on other datasets, we suggest you consider using a simplified version `torchVersion/Model_sparse.py` if your dataset is sparse. To do so, you should change the imported module in `torchVersion/Main.py` from `Model` to `Model_sparse`. For the dataset used in this paper, we recommend the following configurations:
+
+* Yelp
+```
+python Main.py --data yelp --reg 0 --ssl 0.2 --temp 0.1 --keep 1.0
+```
+
+* MovieLens
+```
+python Main.py --data ml10m --reg 1e-6 --ssl 0.5 --temp 0.1
+```
+
+* Amazon
+```
+python Main.py --data amazon --reg 1e-6 --ssl 0.2 --temp 0.1
+```
 
 Important arguments:
 * `reg`: It is the weight for weight-decay regularization. We tune this hyperparameter from the set `{1e-2, 1e-3, 1e-4, 1e-5}`.
