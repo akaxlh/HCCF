@@ -1,7 +1,7 @@
 
 # Hypergraph Contrastive Collaborative Filtering
 
-### Torch version is available now!
+### Torch version is available now! 
 
 This repository contains TensorFlow and pyTorch code and datasets for the paper:
 
